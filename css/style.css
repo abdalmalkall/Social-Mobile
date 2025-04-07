@@ -7,23 +7,23 @@
     --transition-speed: 0.6s;
     --easing: cubic-bezier(0.4, 0, 0.2, 1);
     --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-* {
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Poppins', sans-serif;
     background: var(--secondary-color);
     color: var(--text-color);
     overflow-x: hidden;
-}
-
-/* الهيدر */
-header {
+  }
+  
+  /* الهيدر */
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,24 +34,24 @@ header {
     top: 0;
     z-index: 1000;
     animation: slideDown var(--transition-speed) var(--easing) forwards;
-}
-@keyframes slideDown {
+  }
+  @keyframes slideDown {
     from { transform: translateY(-100%); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
-}
-
-.logo {
+  }
+  
+  .logo {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--primary-color);
     transition: transform var(--transition-speed);
-}
-.logo:hover {
+  }
+  .logo:hover {
     transform: scale(1.05);
-}
-
-nav a {
+  }
+  
+  nav a {
     margin-left: 40px;
     text-decoration: none;
     color: var(--primary-color);
@@ -59,8 +59,8 @@ nav a {
     position: relative;
     font-size: 1.1rem;
     transition: color var(--transition-speed);
-}
-nav a::after {
+  }
+  nav a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -69,13 +69,13 @@ nav a::after {
     height: 2px;
     background: var(--primary-color);
     transition: width var(--transition-speed);
-}
-nav a:hover::after {
+  }
+  nav a:hover::after {
     width: 100%;
-}
-
-/* Hero */
-.hero {
+  }
+  
+  /* Hero */
+  .hero {
     position: relative;
     height: 100vh;
     display: flex;
@@ -83,8 +83,8 @@ nav a:hover::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-.hero::before {
+  }
+  .hero::before {
     content: "";
     position: absolute;
     top: -50%;
@@ -95,41 +95,41 @@ nav a:hover::after {
     animation: rotateBg 40s linear infinite;
     z-index: -1;
     opacity: 0.03;
-}
-@keyframes rotateBg {
+  }
+  @keyframes rotateBg {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
-}
-.hero h1 {
+  }
+  .hero h1 {
     font-size: 4rem;
     font-weight: 900;
     color: var(--primary-color);
     letter-spacing: 3px;
     opacity: 0;
     animation: fadeInUp 1s var(--easing) forwards;
-}
-.hero p {
+  }
+  .hero p {
     font-size: 1.5rem;
     margin-top: 20px;
     color: #333;
     opacity: 0;
     animation: fadeInUp 1s var(--easing) forwards;
     animation-delay: 0.5s;
-}
-@keyframes fadeInUp {
+  }
+  @keyframes fadeInUp {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
-}
-
-/* التصنيفات */
-.categories {
+  }
+  
+  /* التصنيفات */
+  .categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     padding: 80px 60px;
     background: var(--secondary-color);
-}
-.category {
+  }
+  .category {
     background: var(--gray-color);
     padding: 40px 30px;
     border-radius: 20px;
@@ -137,23 +137,23 @@ nav a:hover::after {
     box-shadow: var(--shadow);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     transform: perspective(600px);
-}
-.category:hover {
+  }
+  .category:hover {
     transform: perspective(600px) rotateY(5deg) scale(1.03);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-}
-.category img {
+  }
+  .category img {
     width: 90px;
     filter: grayscale(100%);
     margin-bottom: 20px;
     transition: transform var(--transition-speed);
-}
-.category:hover img {
+  }
+  .category:hover img {
     transform: scale(1.1);
-}
-
-/* الفوتر */
-footer {
+  }
+  
+  /* الفوتر */
+  footer {
     padding: 40px;
     text-align: center;
     background: var(--secondary-color);
@@ -163,17 +163,34 @@ footer {
     opacity: 0;
     animation: fadeIn 1s var(--easing) forwards;
     margin-top: 20px;  /* مسافة إضافية بعد المحتوى */
-}
-@keyframes fadeIn {
+  }
+  @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-footer p {
+  }
+  footer p {
     margin-bottom: 10px;  /* مسافة بين النص وأيقونات الفوتر */
-}
-
-/* العربة */
-#cart {
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;  /* تأكد من أن الأيقونات تظهر في وسط الفوتر */
+    gap: 20px;  /* مسافة بين الأيقونات */
+    margin-top: 10px;  /* إضفاء بعض المسافة من النص */
+  }
+  
+  .social-icons img {
+    width: 30px;  /* الحجم الأصغر للأيقونات */
+    height: 30px; /* يمكن تغيير الحجم هنا حسب الحاجة */
+    transition: transform 0.3s ease; /* تأثير التحويل عند التمرير */
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);  /* تكبير الأيقونة عند التمرير عليها */
+  }
+  
+  /* العربة */
+  #cart {
     position: fixed;
     right: -350px;
     top: 100px;
@@ -185,26 +202,26 @@ footer p {
     box-shadow: var(--shadow);
     z-index: 999;
     transition: right var(--transition-speed);
-}
-#cart.visible {
+  }
+  #cart.visible {
     right: 30px;
-}
-#cart h3 {
+  }
+  #cart h3 {
     margin-top: 0;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary-color);
-}
-#cart-items {
+  }
+  #cart-items {
     list-style: none;
     padding: 0;
     margin: 15px 0;
-}
-#cart-items li {
+  }
+  #cart-items li {
     border-bottom: 1px solid #eee;
     padding: 10px 0;
-}
-#cart button {
+  }
+  #cart button {
     width: 100%;
     padding: 14px;
     background: var(--primary-color);
@@ -214,24 +231,38 @@ footer p {
     font-weight: bold;
     cursor: pointer;
     transition: background var(--transition-speed);
-}
-#cart button:hover {
+  }
+  #cart button:hover {
     background: #222;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;  /* تأكد من أن الأيقونات تظهر في وسط الفوتر */
-    gap: 20px;  /* مسافة بين الأيقونات */
-    margin-top: 10px;  /* إضفاء بعض المسافة من النص */
-}
-
-.social-icons img {
-    width: 30px;  /* الحجم الأصغر للأيقونات */
-    height: 30px; /* يمكن تغيير الحجم هنا حسب الحاجة */
-    transition: transform 0.3s ease; /* تأثير التحويل عند التمرير */
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);  /* تكبير الأيقونة عند التمرير عليها */
-}
+  }
+  
+  /* Media Queries للتجاوب مع الشاشات الصغيرة (مثلاً iPhone X) */
+  @media only screen and (max-width: 480px) {
+    header {
+      padding: 20px;
+    }
+    nav a {
+      margin-left: 20px;
+      font-size: 0.9rem;
+    }
+    .hero {
+      height: auto;
+      padding: 40px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .categories {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    #cart {
+      width: 90%;
+      right: -100%;
+    }
+  }
+  
