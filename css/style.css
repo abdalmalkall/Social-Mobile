@@ -265,4 +265,29 @@
       right: -100%;
     }
   }
-  
+  /* ترتيب الأزرار في الأسفل */
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* مسافة بين الأزرار */
+    margin-top: 50px;
+    padding: 10px;
+    background: var(--secondary-color); /* خلفية باللون الأبيض */
+    border-radius: 20px;
+}
+
+.store-buttons button {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+
+.store-buttons button:hover {
+    background: #444;
+}
