@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watches - Social Mobile</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Social Mobile</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="phones.html">Phones</a>
+        <a href="watches.html">Watches</a>
+        <a href="headphones.html">Headphones</a>
+        <a href="store.html">store</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Smartwatches</h1>
+      <p>Style meets technology</p>
+    </section>
+
+    <section class="categories">
+      <div class="category" onclick="addToCart('Apple Watch Series 9')">
+        <img src="./images/woth.png" alt="Apple Watch" />
+        <h2>Apple Watch S9</h2>
+      </div>
+      <div class="category" onclick="addToCart('Galaxy Watch 6')">
+        <img src="./images/sumwosh.png" alt="Galaxy Watch" />
+        <h2>Galaxy Watch 6</h2>
+      </div>
+    </section>
+
+    <div id="cart" class="hidden">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <footer>&copy; 2025 Social Mobile. All rights reserved.</footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

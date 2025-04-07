@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store - Social Mobile</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Social Mobile</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="phones.html">Phones</a>
+        <a href="watches.html">Watches</a>
+        <a href="headphones.html">Headphones</a>
+        <a href="store.html">🛒 Cart</a>
+      </nav>
+    </header>
+
+    <section class="store">
+      <h1>Store</h1>
+      <div class="store-items">
+        <div class="item">
+          <img src="./images/phone1.png" alt="Phone 1" />
+          <h3>Phone Model 1</h3>
+          <p>$499.99</p>
+          <button onclick="addToCart('Phone Model 1', 499.99)">Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="./images/phone2.png" alt="Phone 2" />
+          <h3>Phone Model 2</h3>
+          <p>$599.99</p>
+          <button onclick="addToCart('Phone Model 2', 599.99)">Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="./images/phone3.png" alt="Phone 3" />
+          <h3>Phone Model 3</h3>
+          <p>$699.99</p>
+          <button onclick="addToCart('Phone Model 3', 699.99)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="cart">
+      <h3>Shopping Cart</h3>
+      <ul id="cart-items"></ul>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Social Mobile. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/10.5of/" target="_blank">
+            <img src="images/instagram-icon.png" alt="Instagram" />
+          </a>
+        </div>
+    </footer>
+    <div class="categories">
+        <div class="category">
+            <img src="phone.jpg" alt="Phone">
+            <h3>هاتف</h3>
+            <button class="add-to-cart" data-item="هاتف">أضف إلى السلة</button>
+        </div>
+        <div class="category">
+            <img src="watch.jpg" alt="Watch">
+            <h3>ساعة</h3>
+            <button class="add-to-cart" data-item="ساعة">أضف إلى السلة</button>
+        </div>
+        <div class="category">
+            <img src="headphone.jpg" alt="Headphone">
+            <h3>سماعة</h3>
+            <button class="add-to-cart" data-item="سماعة">أضف إلى السلة</button>
+        </div>
+    </div>
+    
+    <div id="cart">
+        <h3>عربة التسوق</h3>
+        <ul id="cart-items">
+            <!-- items will be added here -->
+        </ul>
+        <button id="clear-cart">حذف السلة</button>
+    </div>
+    
+    <script src="js/main.js"></script>
+    
+    </script>
+  </body>
+</html>

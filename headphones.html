@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headphones - Social Mobile</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Social Mobile</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="phones.html">Phones</a>
+        <a href="watches.html">Watches</a>
+        <a href="headphones.html">Headphones</a>
+        <a href="#" id="cart-btn">🛒 Cart</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Headphones</h1>
+      <p>Immerse in high-quality sound</p>
+    </section>
+
+    <section class="categories">
+      <div class="category" onclick="addToCart('AirPods Pro 2')">
+        <img src="./images/airpro1.png" alt="AirPods" />
+        <h2>AirPods Pro 2</h2>
+      </div>
+      <div class="category" onclick="addToCart('Galaxy Buds 2 Pro')">
+        <img src="./images/airsum.png" alt="Galaxy Buds" />
+        <h2>Galaxy Buds 2 Pro</h2>
+      </div>
+    </section>
+
+    <div id="cart" class="hidden">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <footer>&copy; 2025 Social Mobile. All rights reserved.</footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
