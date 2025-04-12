@@ -119,5 +119,19 @@ function addToCart(name, price) {
   document.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
     displayCart?.();
+  });const cartItemsContainer = document.getElementById('cartItems');
+
+  // مثلاً عندك مصفوفة cartItems أو cartData
+  cartData.forEach(item => {
+    const productDiv = document.createElement('div');
+    productDiv.classList.add('product');
+  
+    productDiv.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>Price: $${item.price}</p>
+      <button class="remove-btn">Remove</button>
+    `;
+  
+    cartItemsContainer.appendChild(productDiv);
   });
   
