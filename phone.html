@@ -3,46 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Headphones - SOCIAL MOBILE</title>
+  <title>Phones - SOCIAL MOBILE</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Search Section -->
-  <div class="container">
-    <input type="text" placeholder="Search...">
-    <div class="search"></div>
-  </div>
-
-  <!-- Header -->
   <header class="header">
     <div class="logo">SOCIAL MOBILE</div>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="cart.html">Shopping Cart</a>
+      <!-- إضافة الكلاس .cart-link هنا -->
+      <a href="cart.html" class="cart-link">Shopping Cart (0)</a>
     </nav>
   </header>
 
-  <!-- Products Section -->
   <main class="products">
     <div class="product">
-      <h3>AirPods Pro</h3>
-      <p>Price: $250</p>
-      <button onclick="addToCart('AirPods Pro', 250)">Add to Cart</button>
+      <h3>iPhone 15 Pro</h3>
+      <p>Price: $1000</p>
+      <button onclick="addToCart('iPhone 15 Pro', 1000)">Add to Cart</button>
     </div>
     <div class="product">
-      <h3>Samsung Buds 2</h3>
-      <p>Price: $180</p>
-      <button onclick="addToCart('Samsung Buds 2', 180)">Add to Cart</button>
+      <h3>Samsung Galaxy S24</h3>
+      <p>Price: $900</p>
+      <button onclick="addToCart('Samsung Galaxy S24', 900)">Add to Cart</button>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>© 2025 SOCIAL MOBILE. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
   <script src="js/cart.js"></script>
 </body>
 </html>

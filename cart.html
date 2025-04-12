@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - SOCIAL MOBILE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">SOCIAL MOBILE</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="cart.html">Shopping Cart</a>
+    </nav>
+  </header>
+
+  <main class="cart">
+    <h2>Your Shopping Cart</h2>
+    <div id="cartItems">
+      <!-- Items will be displayed here dynamically -->
+    </div>
+    <div id="cartTotal">
+      <p>Total: $<span id="totalAmount">0</span></p>
+    </div>
+    <button onclick="clearCart()">Clear Cart</button>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 SOCIAL MOBILE. All rights reserved.</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>

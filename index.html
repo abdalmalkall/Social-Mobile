@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Mobile Store</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-  </head>
-  <body>
-    <header>
-      <a href="index.html" class="logo">Social Mobile</a>
-      <nav>
-        <!-- <a href="index.html">Home</a>
-        <a href="phones.html">Phones</a>
-        <a href="watches.html">Watches</a>
-        <a href="headphones.html">Headphones</a>
-        <a href="#" id="cart-btn">🛒 Cart</a> -->
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOCIAL MOBILE</title>
+  <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <section class="hero">
-      <h1>Welcome to Social Mobile</h1>
-      <p>Explore premium smartphones, smartwatches, and headphones</p>
-    </section>
+</head>
+<body>
 
-    <section class="categories">
-      <div class="category" onclick="location.href='phones.html'">
-        <img src="./images/Screenshot_1-removebg-preview.png" alt="Phones" />
-        <h2>Phones</h2>
-      </div>
-      <div class="category" onclick="location.href='watches.html'">
-        <img src="./images/Screenshot_5-removebg-preview.png" alt="Watches" />
-        <h2>Watches</h2>
-      </div>
-      <div class="category" onclick="location.href='headphones.html'">
-        <img
-          src="./images/Screenshot_2-removebg-preview.png"
-          alt="Headphones"
-        />
-        <h2>Headphones</h2>
-      </div>
-    </section>
+  <!-- Search Section -->
+  <div class="container">
+    <input type="text" placeholder="Search...">
+    <div class="search"></div>
+  </div>
 
-    <footer>
- 
-        <div class="store-buttons">
-            <button onclick="window.location.href='index.html'">Home</button>
-            <button onclick="window.location.href='phones.html'">Phones</button>
-            <button onclick="window.location.href='watches.html'">Watches</button>
-            <button onclick="window.location.href='headphones.html'">Headphones</button>
-        </div>
-        
-        <p>&copy; 2025 Social Mobile. All rights reserved.</p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com" target="_blank">
-            <img src="images/png-clipart-computer-icons-facebook-inc-logo-like-button-facebook-logo-desktop-wallpaper-thumbnail-removebg-preview.png" alt="Facebook" />
-          </a>
-          <a href="https://www.instagram.com/social_mobile2/" target="_blank">
-            <img src="images/png-clipart-instagram-icon-computer-icons-instagram-logo-area-thumbnail-removebg-preview.png" alt="Instagram" />
-          </a>
-        </div>
-      </footer>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">SOCIAL MOBILE</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="cart.html">Shopping Cart</a>
+    </nav>
+  </header>
 
-      
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Categories Section -->
+  <main class="categories">
+    <a href="phone.html" class="category">
+      <img src="images/Screenshot_1-removebg-preview.png" alt="Phones" class="category-icon" />
+      <h3>Phones</h3>
+    </a>
+    <a href="headphones.html" class="category">
+      <img src="images/Screenshot_2-removebg-preview.png" alt="Headphones" class="category-icon" />
+      <h3>Headphones</h3>
+    </a>
+    <a href="phon.html" class="category">
+      <img src="images/Screenshot_5-removebg-preview.png" alt="Smart Watch" class="category-icon" />
+      <h3>Smart Watch</h3>
+    </a>
+    <a href="accessories.html" class="category">
+      <img src="images/image-removebg-preview (1).png" alt="Accessories" class="category-icon" />
+      <h3>Accessories</h3>
+    </a>
+  </main>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/social_mobile2/" target="_blank" class="social-icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://web.facebook.com/profile.php?id=61574465597900" target="_blank" class="social-icon">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 SOCIAL MOBILE. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
 </html>
