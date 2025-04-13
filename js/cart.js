@@ -135,3 +135,85 @@ function addToCart(name, price) {
     cartItemsContainer.appendChild(productDiv);
   });
   
+// عرض محتويات السلة في صفحة cart.html
+function displayCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartItemsContainer = document.getElementById("cartItems");
+  const totalAmount = document.getElementById("totalAmount");
+
+  if (!cartItemsContainer || !totalAmount) return;
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    totalAmount.textContent = "0";
+    return;
+  }
+
+  let total = 0;
+  cartItemsContainer.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    total += item.price * item.quantity;
+
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("cart-item");
+
+    productDiv.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>Price: $${item.price}</p>
+      <p>Quantity: ${item.quantity}</p>
+      <button class="remove-btn" data-index="${index}">
+        <i class="fas fa-trash-alt"></i> Remove
+      </button>
+    `;
+
+    cartItemsContainer.appendChild(productDiv);
+  });
+
+  // إضافة الحدث لكل زر إزالة
+  document.querySelectorAll(".remove-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const index = btn.getAttribute("data-index");
+      const productDiv = btn.closest(".cart-item");
+
+      // تأثير تلاشي قبل الإزالة
+      productDiv.style.transition = "opacity 0.4s ease";
+      productDiv.style.opacity = "0";
+      setTimeout(() => {
+        removeFromCart(index);
+      }, 400);
+    });
+  });
+
+  totalAmount.textContent = total.toFixed(2);
+}
+// تفعيل زر "Buy Now"
+document.querySelectorAll(".buy-now-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const index = btn.getAttribute("data-index");
+    alert("Thank you for your purchase!");
+    removeFromCart(index); // بعد الشراء نحذف العنصر من السلة
+  });
+});
+document.querySelectorAll(".buy-now-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const index = btn.getAttribute("data-index");
+
+    // يمكن هنا حفظ العنصر المحدد في localStorage ليتم عرضه في pay.html
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const selectedItem = cart[index];
+
+    localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
+
+    // حذف العنصر من السلة الأصلية
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // تحديث السلة ثم التوجيه
+    updateCartCount();
+    displayCart();
+
+    // التوجيه لصفحة الدفع
+    window.location.href = "pay.html";
+  });
+});
