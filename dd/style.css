@@ -2,7 +2,7 @@
 
 :root{
     --white: black;
-    --black: white; 
+    --black: rgb(255, 255, 255); 
     --lightBulue: #27d4ff;
 }
 
@@ -237,7 +237,7 @@ form .linkTxt{
     right: 0;
     width: 850px;
     height: 600px;
-    background: #27ffdb;
+    background: #ffffff;
     transform: rotate(10deg) skewY(40deg);
     transform-origin: bottom right;
     transition: 1.5s ease;

@@ -192,28 +192,24 @@ document.querySelectorAll(".buy-now-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const index = btn.getAttribute("data-index");
     alert("Thank you for your purchase!");
-    removeFromCart(index); // بعد الشراء نحذف العنصر من السلة
+    removeFromCart(index); 
   });
 });
 document.querySelectorAll(".buy-now-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const index = btn.getAttribute("data-index");
 
-    // يمكن هنا حفظ العنصر المحدد في localStorage ليتم عرضه في pay.html
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const selectedItem = cart[index];
 
     localStorage.setItem("selectedItem", JSON.stringify(selectedItem));
 
-    // حذف العنصر من السلة الأصلية
     cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    // تحديث السلة ثم التوجيه
     updateCartCount();
     displayCart();
 
-    // التوجيه لصفحة الدفع
     window.location.href = "pay.html";
   });
 });
