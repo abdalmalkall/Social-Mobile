@@ -195,4 +195,71 @@
   .remove-btn i {
     margin-right: 5px;
   }
-  
+  /* BASE */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fff; /* أبيض */
+  color: #0057b7; /* أزرق */
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  color: #0057b7;
+}
+
+.nav a {
+  color: #0057b7;
+}
+
+.nav a::after {
+  background: #0057b7;
+}
+
+/* SEARCH */
+.search-container input {
+  background: #e6f0ff;
+  color: #0057b7;
+}
+
+.search-icon {
+  color: #0057b7;
+}
+
+/* CATEGORIES */
+.category {
+  background: #f0f8ff;
+  color: #0057b7;
+  box-shadow: 0 10px 20px rgba(0, 87, 183, 0.1);
+}
+
+.category:hover {
+  box-shadow: 0 15px 35px rgba(0, 87, 183, 0.2);
+}
+
+/* PRODUCTS */
+.product {
+  background: #f5faff;
+  color: #0057b7;
+  box-shadow: 0 10px 30px rgba(0, 87, 183, 0.05);
+}
+
+.product p {
+  color: #336699;
+}
+
+.product button {
+  background: #0057b7;
+  color: #fff;
+}
+
+.product button:hover {
+  background: #0047a0;
+}
