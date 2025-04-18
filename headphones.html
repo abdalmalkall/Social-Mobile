@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Headphones -  UPHONE</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headphones - UPHONE</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">UPHONE</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="cart.html">Shopping Cart</a>
+      </nav>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">UPHONE</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="cart.html">Shopping Cart</a>
-    </nav>
-    
-  <!-- Search Section -->
-  <div class="container">
-    <input type="text" placeholder="Search...">
-    <div class="search"></div>
-  </div>
-  </header>
+      <!-- Search Section -->
+      <div class="container">
+        <input type="text" placeholder="Search..." />
+        <div class="search"></div>
+      </div>
+    </header>
 
+    <!-- Products Section -->
+    <main class="products">
+      <div class="product">
+        <h3>SMART WATCH WIWU SW01 PRO LITE</h3>
+        <img src="./images/490868593_527089813788934_4028440839614203769_n-removebg-preview.png" alt="SMART WATCH WIWU SW01 PRO LITE" width="200" />
+        <p>19.99</p>
+        <button
+          onclick="addToCart('SMART WATCH WIWU SW01 PRO LITE', 250)"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div class="product">
+        <h3>SMART WATCH WIWU SW01 PRO LITE</h3>
+        <img src="./images/490868593_527089813788934_4028440839614203769_n-removebg-preview.png" alt="SMART WATCH WIWU SW01 PRO LITE" width="200" />
+        <p>19.99</p>
+        <button
+          onclick="addToCart('SMART WATCH WIWU SW01 PRO LITE', 250)"
+        >
+          Add to Cart
+        </button>
+      </div>
 
-  <!-- Products Section -->
-  <main class="products">
-    <div class="product">
-      <h3>AirPods Pro</h3>
-      <p>Price: $250</p>
-      <button onclick="addToCart('AirPods Pro', 250)">Add to Cart</button>
-    </div>
-    <div class="product">
-      <h3>Samsung Buds 2</h3>
-      <p>Price: $180</p>
-      <button onclick="addToCart('Samsung Buds 2', 180)">Add to Cart</button>
-    </div>
-  </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 UPHONE. All rights reserved.</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 UPHONE. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="js/cart.js"></script>
-</body>
+    <!-- JavaScript -->
+    <script src="js/cart.js"></script>
+  </body>
 </html>
